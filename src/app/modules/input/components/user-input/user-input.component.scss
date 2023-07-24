@@ -1,0 +1,11 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+  background-color: rgb(145, 145, 238);
+}
+.content-wrapper {
+  display: flex;
+  justify-content: space-between;
+}

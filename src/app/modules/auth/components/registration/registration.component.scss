@@ -1,0 +1,21 @@
+.auth-page {
+  position: relative;
+  height: 100vh;
+  padding: 0 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f0f2f5;
+
+  form.login-form {
+    width: 22.5rem;
+
+    .ant-row.login-form-margin {
+      margin-bottom: 1.375rem;
+    }
+
+    button {
+      width: 100%;
+    }
+  }
+}

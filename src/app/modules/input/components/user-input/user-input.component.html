@@ -1,0 +1,29 @@
+<div class="header">
+  <button nz-button nzType="primary" (click)="logout()">logOut</button>
+  <button nz-button nzType="primary" (click)="deleteUser()">Delete User</button>
+  <button nz-button nzType="primary" (click)="refresh()">refresh</button>
+</div>
+<div class="content-wrapper">
+  <div class="new-input-container">
+    <input nz-input placeholder="Basic usage" [(ngModel)]="value" />
+    <button nz-button nzType="primary" (click)="executeButtonClicked()">
+      {{ buttonText }}
+    </button>
+  </div>
+  <div class="prev-input-container">
+    <ng-container *ngFor="let input of inputs">
+      <div class="prev-input" (click)="prevInputClicked(input._id)">
+        {{ input.value }}
+      </div>
+      <button
+        nz-button
+        nzType="primary"
+        nzShape="circle"
+        nzDanger
+        (click)="deleteInput(input._id)"
+      >
+        delete
+      </button>
+    </ng-container>
+  </div>
+</div>

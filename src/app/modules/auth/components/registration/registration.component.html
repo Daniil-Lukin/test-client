@@ -1,0 +1,53 @@
+<div class="auth-page">
+  <form
+    nz-form
+    [formGroup]="registrationForm"
+    class="login-form"
+    (ngSubmit)="submitForm()"
+  >
+    <nz-form-item> </nz-form-item>
+    <nz-form-item>
+      <nz-form-control [nzErrorTip]="'invalid email'">
+        <nz-input-group nzPrefixIcon="user">
+          <input
+            type="text"
+            nz-input
+            formControlName="email"
+            [placeholder]="'email'"
+          />
+        </nz-input-group>
+      </nz-form-control>
+    </nz-form-item>
+    <nz-form-item>
+      <nz-form-control [nzErrorTip]="'Invalid password'">
+        <nz-input-group nzPrefixIcon="lock">
+          <input
+            type="password"
+            nz-input
+            formControlName="password"
+            [placeholder]="'Password'"
+          />
+        </nz-input-group>
+      </nz-form-control>
+    </nz-form-item>
+    <nz-form-item>
+      <nz-form-control [nzErrorTip]="'Invalid password'">
+        <nz-input-group nzPrefixIcon="lock">
+          <input
+            type="password"
+            nz-input
+            formControlName="passwordRepeat"
+            [placeholder]="'Password repeat field'"
+          />
+        </nz-input-group>
+      </nz-form-control>
+    </nz-form-item>
+    <button
+      nz-button
+      class="login-form-button login-form-margin"
+      [nzType]="'primary'"
+    >
+      Registrate
+    </button>
+  </form>
+</div>
